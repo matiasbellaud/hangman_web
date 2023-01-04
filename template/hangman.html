@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman Web</title>
+    <link rel="stylesheet" href="assets/styleHangman.css">
+    <link rel="icon" type="image/png" href="/assets/logo page.png" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+</head>
+
+<body>
+    <!--HEADER-->
+    <header class="header-logo">
+        <div class="logo">
+            <a target="_blank"><img src="/assets/logo page.png" alt="Image" height="100" width="100"></a>
+        </div>
+        {{if eq .Essai "0"}}
+        <meta http-equiv="refresh" content="0; url=http://localhost:4000/loose"> {{end}} {{ if eq .Word .ToFind}}
+        <meta http-equiv="refresh" content="0; url=http://localhost:4000/win"> {{end}}
+
+    </header>
+    <!--CONTENU FORMULAIRE-->
+    <div id="container">
+
+
+        <form class="text-hangman">
+            <div class="hangman-corp">
+                <div class="center">
+                    <div class="boite">
+                        <label>{{.Word}}</label>
+                        <label>{{.Letter}}</label>
+                        <input name="chooseLetter" type="text" placeholder="Choose a Letter" autofocus>
+                        <i class="fa-sharp fa-solid fa-keyboard"></i>
+                        </input>
+                    </div>
+                </div>
+            </div>
+            <div class="nb-essaie">nombre d'essai restant {{.Essai}}</div>
+            <div class="letter-utiliser">voici les lettres déjà utilisées {{.ListLetter}}</div>
+            <div class="hangman-pied">
+                <button>Send</button>
+            </div>
+
+        </form>
+        <img class="pendu" src="{{.DisplayHangman}}" alt="Image" height="100" width="100">
+    </div>
+</body>
+
+</html>

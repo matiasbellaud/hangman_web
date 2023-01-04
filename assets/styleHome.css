@@ -1,0 +1,60 @@
+body {
+    background-color: hsl(27, 40%, 50%);
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.header-home .logo a {
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 75px;
+    padding-top: 20px;
+}
+
+.center-text h1 {
+    color: white;
+    font-size: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.center-btn button {
+    margin-top: 10px;
+    background-color: white;
+    color: hsl(27, 40%, 50%);
+    border: none;
+    padding: 10px 50px;
+    font-size: 15px;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    display: flex;
+    justify-content:center;
+    bottom: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+}
+
+.center-btn a {
+    text-decoration: none;
+}
+
+.forms {
+    display: flex;
+    justify-content: center;
+    margin-top: 400px;
+}
+
+footer {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    bottom: 10px;
+    width: 100%;
+    color: white;
+}
