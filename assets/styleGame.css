@@ -1,0 +1,124 @@
+body {
+    background-color: #b37a4d;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Poppins', sans-serif;
+}
+form {
+    background-color: white;
+    padding: 30PX;
+    border-radius: 10PX;
+    box-shadow: 1px 1px 5px 0px black;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 25%;
+    height: 25%;
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+form .seperate {
+    width: 100%;
+    height: 1PX;
+    background-color: hsl(27, 40%, 50%);
+    display: flex;
+    justify-content: center;
+}
+form .hangman-corp .center {
+    display: flex;
+    margin-bottom: 30PX;
+    justify-content: center;
+    flex-direction: row;
+}
+form .hangman-corp .boite {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+form .hangman-corp .center .boite input {
+    padding: 10px 5px 10px 30px;
+    border: 1px solid hsl(27, 40%, 50%);
+    outline-color: hsl(27, 40%, 50%);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 30px;
+
+}
+form .hangman-corp .center .boite i {
+    position: relative;
+    left: 0;
+    bottom: 35px;
+    padding: 9px 8px;
+    color: hsl(27, 40%, 50%);
+    width: min-content;
+    position: relative;
+    top: -6px;
+}
+form .hangman-pied button {
+    margin: auto;
+    background-color: hsl(27, 40%, 50%);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 12px;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    transition: transform 0.5s;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    position: relative;
+    bottom: 20px;
+}
+form .hangman-pied button:hover {
+    transform: scale(1.05);
+}
+@media screen and (max-width:920px) {
+    form .formulaire-corp .right {
+        margin-left: 0PX;
+    }
+}
+.header-logo {
+    display: flex;
+    justify-content: flex-start;
+}
+.header-logo .logo a {
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 75px;
+    padding-top: 20px;
+}
+
+.nb-essaie {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    bottom: 20px;
+    color:#b37a4d;
+
+}
+
+.letter-utiliser {
+    color: #b37a4d;
+    position: relative;
+    bottom: 20px;
+}
+
+.pendu {
+margin-top: 200px;
+margin-left: 400px;
+
+}
+#container {
+    display: flex;
+    
+    flex-direction: row;
+}

@@ -46,6 +46,7 @@ func Play() {
 	toFind := hangman.RandomWord(difficulty, language)
 	word := hangman.RevealRandomLetter(toFind)
 
+	//fonction de la page home
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		//initialisation des variables
 		tmpl := template.Must(template.ParseFiles("template/home.html"))
@@ -101,8 +102,12 @@ func Play() {
 		newWord, _, _ := hangman.PrintWord(toFind, word, listLetter, input)
 		var essai_str string
 		letterUsed := false
-
 		validLetter, inputLetter := hangman.VerifInput(input, word)
+
+		// pour empecher le compteur d'aller en négatif si on revient en arriere
+		if essai <= 0 {
+			essai = 0
+		}
 
 		// vérification d'input faux
 		if !validLetter {
@@ -140,6 +145,7 @@ func Play() {
 			ToFind:     toFind,
 			ListLetter: listLetter,
 		}
+
 		essai_str = strconv.Itoa(10 - essai)                                 // Modifier essai pour aller dans le sens des images
 		data.DisplayHangman = "/assets/hangman/hangman" + essai_str + ".jpg" // displayHangman est égale aux images
 		totalEssai++
